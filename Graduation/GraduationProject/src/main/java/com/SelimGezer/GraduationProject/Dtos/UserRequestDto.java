@@ -14,7 +14,7 @@ import java.util.Date;
 public class UserRequestDto {
 
     @NotNull(message = "Boş değer girişine izin verilmemektedir!")
-    @IdentificationNumber(message = "Lütfen 11 haneli geçerli bir kimlik numarası giriniz!")
+    @IdentificationNumber(message = "Lütfen 11 haneli,çift ve geçerli bir kimlik numarası giriniz!")
     private Long identificationNumber;
 
     @NotNull(message = "Boş değer girişine izin verilmemektedir!")
