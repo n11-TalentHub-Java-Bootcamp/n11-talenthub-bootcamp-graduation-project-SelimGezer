@@ -1,8 +1,8 @@
-##Kurulum AŞAMALARI
+## Kurulum AŞAMALARI
 
 ---
 
-###Dosya Yapısı
+### Dosya Yapısı
 >Graduation (Main Directory) 
 > * GraduationProject (backend) **(Spring Boot-MySQL)**
 > * graduationFronted (frontend) **(React)**
@@ -12,7 +12,7 @@ Proje docker üzerinde çalışabilir haldedir. Projeyi sisteminize indirdikten 
 
 Not: Her 2 kurulum içinde **BIOS** üzerinden sanallaştırma(virtualization) aktif hale getirilmesi gerekmektedir.
 
-###Docker Kurulumu (Window 10 Home Edition için)
+### Docker Kurulumu (Window 10 Home Edition için)
 **Docker for Window** Windows 10 işletim sistemine göre tasarlanmıştır. Ve çalışmalarını gerçekleştirmek için Hyper-V sanallaştırma kullanır. Fakat bildiğiniz üzere Window 10 Home Edition için Hyper-V desteği bulunmamaktadır. Docker'ı Windows 10 Home Edition versiyonunda çalıştırmak için normalde farklı sanallaştırma teknolojileriden yararlanılmaktaydı (Virtul Box). Fakat **WSL2**' nin piyasaya sürülmesiyle birlikte artık bu işletim sistemi üzerinde de yerel olarak çalıştıralabilmesi mümkün hale geldi.
 Bu şekilde çalıştırabilmek için ise bazı ön koşullar gerekmektedir. **Windows için 2004 sürümünde** olmanız gerekiyor. 
 * Sistem sürümünüzü öğrenmek için 
@@ -22,7 +22,7 @@ Eğer sistem sürümünüz 2004 olarak görünmüyorsa Windows Güncellemelerini
 
 Eğer buraya kadar bir sorun görünmüyorsa artık **WSL' yi yükleyebiliriz**.
 
-####Wsl Kurulum Aşamaları
+#### Wsl Kurulum Aşamaları
 
 1. Window Powershell yönetici modunda çalıştırın.
 <br><br>
@@ -36,7 +36,7 @@ Eğer buraya kadar bir sorun görünmüyorsa artık **WSL' yi yükleyebiliriz**.
 
 Bu işlemleri tamamladıktan sonra artık **docker kurulumana** geçebiliriz.
 
-####Docker Kurulum Aşamaları
+#### Docker Kurulum Aşamaları
 1. https://docs.docker.com/desktop/windows/install/ sitesinden kurulum dosyasını indirebilirsiniz.
 2. Kurulum bittikten bilgisayarınızı yeniden başlatmanız gerekmektedir.
 
@@ -44,23 +44,23 @@ Artık proje çalıştırma aşamasına geçebiliriz.
 
 ---
 
-###Docker Kurulumu (Window 10 Pro ve Üzeri için)
+### Docker Kurulumu (Window 10 Pro ve Üzeri için)
 Bu versiyonlarda yapmamız gereken ilk şey **Hyper-V** sanallaştırmayı etkinleştirmemiz olacaktır. 
 
 * Bunun için Denetim Masası -> Programlar -> Windows Özelliklerini aç veya kapat -> Hyper-V (aktifleştir.) 
 
-![hyper](C:\Users\Selim Gezer\Desktop\hyper.png)
+![hyper](https://user-images.githubusercontent.com/72503092/151660557-ff29ae9e-bf0e-402f-8809-ddbc4089b1e0.png)
 
 Bu işlemleri tamamladıktan sonra artık **docker kurulumana** geçebiliriz.
 
-####Docker Kurulum Aşamaları
+#### Docker Kurulum Aşamaları
 1. https://docs.docker.com/desktop/windows/install/ sitesinden kurulum dosyasını indirebilirsiniz.
 2. Kurulum bittikten bilgisayarınızı yeniden başlatmanız gerekmektedir.
 3. Docker Desktop Çalıştırın. Eğer Wsl hatası ile karşılaşırsanız. Aşağıdaki işlemi gerçekleştirin.
 
 * Docker Settings -> General -> Use the WSL 2 based engine (kapalı hale getirin.)
 
-![docker](C:\Users\Selim Gezer\Desktop\dockerr.png)
+![dockerr](https://user-images.githubusercontent.com/72503092/151660563-99e54052-7316-415d-8116-39041d26f383.png)
 
 4. Apply & restart diyerek dockerı yeniden başlatın.
 
@@ -68,52 +68,53 @@ Artık proje çalıştırma aşamasına geçebiliriz.
 
 ---
 
-###Proje Çalıştırma Aşaması
+### Proje Çalıştırma Aşaması
 
 1. Tek yapmamız gereken Proje Ana dizinindeyken (Graduation) **komut istemini(cmd)** çalıştırmak. 
 Bunu kısayoldan gerçekleştirmek için dosya yoluna cmd yazıp enter tıklayarak yapabilirsiniz.<br><br>
-![cmd](C:\Users\Selim Gezer\Desktop\cmd.png)
+![cmd](https://user-images.githubusercontent.com/72503092/151660576-2ba09430-e2af-4236-a46a-b42083d55042.png)
 2. Komut isteminde aşağıdaki komutu çalıştırabilirsiniz. Komut bu proje için ilk defa çalıştırıldığında gerekeli kurulum işlemleri biraz zaman almaktadır.(5 ile 10 dk). Kurulum tamamlanınca aşağıdaki görseldeki yapıyla karşılaşacaksınız.
 
 >**docker-compose up -d**
  
-![run](C:\Users\Selim Gezer\Desktop\run.png)
+![run](https://user-images.githubusercontent.com/72503092/151660584-a3aef84e-1d08-43c0-907d-6081e7afc00d.png)
 
 3. Çalışan servisleri görmek için aşağıdaki komut kullanılabilir.
 > **docker ps**
 
-![ps](C:\Users\Selim Gezer\Desktop\ps.png)
+![ps](https://user-images.githubusercontent.com/72503092/151660588-d1556a3d-9125-403d-813f-3ff8a2ce2d39.png)
 
 4. Servisleri kapatmak için aşağıdaki komut kullanılabilir.
 > **docker-compose down**
 
-![ps](C:\Users\Selim Gezer\Desktop\down.png)
+![down](https://user-images.githubusercontent.com/72503092/151660598-012ce358-db56-4fbe-a513-c656dfe9d852.png)
 
 ---
 
-###Test Aşaması
+### Test Aşaması
 1. Herhangi bir tarayıcı açınız.(Chrome, Opera)
 2. **http://localhost/**  diyerek **fronted** kısmına erişebilirsiniz.<br><br>
-![frontend](C:\Users\Selim Gezer\Desktop\localhost.png) <br><br>
+![localhost](https://user-images.githubusercontent.com/72503092/151660610-5b7dffb5-b72d-474a-9093-c495ee294a41.png) <br><br>
 
    1. **http://localhost/users** diyerek sistemdeki kullanıcılara erişebilirsiniz.Varsayılan olarak sistemde 3 kullanıcı kayıtlı olarak gelecektir.<br><br>
-      ![users](C:\Users\Selim Gezer\Desktop\localhostUser.png) <br><br>
+   ![localhostUser](https://user-images.githubusercontent.com/72503092/151660617-7ac3bc27-81cd-43f2-8567-611d08395a1f.png)  <br><br>
    2. **http://localhost/login**  kullanıcı giriş sistemi için tasarlanmıştır. Projeye ilerleyen zamanlarda eklenebilir.(Aktif değildir!)<br><br>
-      ![login](C:\Users\Selim Gezer\Desktop\login.png)<br><br>
+    ![login](https://user-images.githubusercontent.com/72503092/151660619-37c6e927-134d-4a59-a6ab-9ef51e1fff67.png) <br><br>
 3. **http://localhost:8080/swagger-ui/** diyerek **backend** kısmına erişebilirsiniz.<br><br>
-   ![backend](C:\Users\Selim Gezer\Desktop\backend.png)
+   ![backend](https://user-images.githubusercontent.com/72503092/151660630-d1fa428e-6bfd-4921-bf08-3099fcad844a.png)
 
+---
 
-###Sms Servisi
+### Sms Servisi
 Sms göndermek için **Twilio Servisi** kullanılmıştır. Bu servis deneme sürümünde sadece onaylanmış telefon numaralarına sms
 göndermektedir. Bu nedenle test edilirken sms gelmeyecektir.
 Eğer numara onaylanırsa beklenen sms örneği aşağıda gösterilmiştir. 
 
-![sms](C:\Users\Selim Gezer\Desktop\sms.jpg)
+![sms](https://user-images.githubusercontent.com/72503092/151660632-561cfdcf-c18a-4ee9-aee6-ecd6a164bbcd.jpg)
 
 ---
 
-###Ekstra Notlar
+### Ekstra Notlar
 * **Kredi Scoru** hesaplanırken **kimlik numarasının son 3 hanesine** göre işlem gerçekleştirmektedir.Basitçe söylemek gerekirse son 3 hane 500 değerinin altında ise 
 olduğu gibi kalmaktadır. Eğer 500'ün üzerinde ise random bir kaysayı ile çarpılarak işlem gerçekleştirilmektedir.
 Proje içerisindeki ilgili lokasyondan incelenebilir.(Util/CreditScoreCalculator)
@@ -126,6 +127,6 @@ sonu çift hane ile biten kimlik numaraları ile işlem gerçekleştiriniz.
 * Sadece ilk çaıştırma esnasında aşağıdaki hatayla karşılaşılacak fakat sorunsuz çalışacaktır. Bunun nedeni veritabanı hali hazırda bulunmadığı için
 yapmaya çalıştığı drop işlemini gerçekleştirememesidir. Sonraki çalıştırma işlemlerinde bu hata görülmeyecektir.
 <br><br>
-![sms](C:\Users\Selim Gezer\Desktop\foreign.png)
+![foreign](https://user-images.githubusercontent.com/72503092/151660639-f09c6529-9e87-43cc-9e00-8f8882cfd144.png)
 <br><br>
-* Kimlik numarası **unique** olduğu için aynı kimlik numarası ile işlem yapıldığında **fronted** tarafının console penceresinden oluşan hata görülebilir.
+* Kimlik numarası **unique** olduğu için aynı kimlik numarası ile işlem yapıldığında **fronted** tarafının **console penceresinden** oluşan hata görülebilir.
