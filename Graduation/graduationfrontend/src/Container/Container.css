@@ -1,0 +1,34 @@
+
+.container{
+    width: 1000px;
+    margin:  auto;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 150px 530px;
+    grid-template-areas: "header header header"
+                         "main main main "
+                         "main main main"
+                         "main main main"                         ;
+    grid-gap: 25px;
+  }
+  
+  .container > *{
+    background-color: #a73535;
+  }
+  
+  .header{
+    grid-area: header;
+  }
+  .aside{
+    grid-area: aside;
+  }
+  .main{
+    grid-area: main;
+  }
+  .item-1{
+    grid-area: item-1;
+  }
+  .item-2{
+    grid-area: item-2;
+  }
