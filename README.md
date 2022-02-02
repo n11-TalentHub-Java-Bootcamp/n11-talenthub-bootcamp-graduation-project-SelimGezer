@@ -49,7 +49,7 @@ Bu versiyonlarda yapmamız gereken ilk şey **Hyper-V** sanallaştırmayı etkin
 
 * Bunun için Denetim Masası -> Programlar -> Windows Özelliklerini aç veya kapat -> Hyper-V (aktifleştir.) 
 
-![hyper](https://user-images.githubusercontent.com/72503092/151660557-ff29ae9e-bf0e-402f-8809-ddbc4089b1e0.png)
+![hyperV](https://user-images.githubusercontent.com/72503092/152138312-17819582-b347-42b1-9b77-e1aff257713b.png)
 
 Bu işlemleri tamamladıktan sonra artık **docker kurulumana** geçebiliriz.
 
@@ -60,7 +60,7 @@ Bu işlemleri tamamladıktan sonra artık **docker kurulumana** geçebiliriz.
 
 * Docker Settings -> General -> Use the WSL 2 based engine (kapalı hale getirin.)
 
-![dockerr](https://user-images.githubusercontent.com/72503092/151660563-99e54052-7316-415d-8116-39041d26f383.png)
+![dockerSettings](https://user-images.githubusercontent.com/72503092/152138478-ba7f7b98-4e00-4348-8b24-24a6781aa361.png)
 
 4. Apply & restart diyerek dockerı yeniden başlatın.
 
@@ -72,8 +72,8 @@ Artık proje çalıştırma aşamasına geçebiliriz.
 
 1. Tek yapmamız gereken Proje Ana dizinindeyken (Graduation) **komut istemini(cmd)** çalıştırmak. 
 Bunu kısayoldan gerçekleştirmek için dosya yoluna cmd yazıp enter tıklayarak yapabilirsiniz.<br><br>
-![cmd](https://user-images.githubusercontent.com/72503092/151660576-2ba09430-e2af-4236-a46a-b42083d55042.png)
-2. Komut isteminde aşağıdaki komutu çalıştırabilirsiniz. Komut bu proje için ilk defa çalıştırıldığında gerekeli kurulum işlemleri biraz zaman almaktadır.(5 ile 10 dk). Kurulum tamamlanınca aşağıdaki görseldeki yapıyla karşılaşacaksınız.
+![cmd](https://user-images.githubusercontent.com/72503092/152138398-952ed166-5e14-4c6f-a90a-2ec5aae66fa6.png)
+2. Komut isteminde aşağıdaki komutu çalıştırabilirsiniz. Komut bu proje için ilk defa çalıştırıldığında gerekli kurulum işlemleri biraz zaman almaktadır.(5-10 dk). Kurulum tamamlanınca aşağıdaki görseldeki yapıyla karşılaşacaksınız.
 
 >**docker-compose up -d**
  
